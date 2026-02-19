@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Portfolio of a Robotics and Machine Learning Engineer specializing in RL, Generative AI, and Sensor Fusion.">
+    <title>Robotics & ML Engineer Portfolio</title>
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+    
+    <!-- FontAwesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Styles -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-brand">Portfolio</div>
+            <ul class="nav-menu">
+                <li><a href="#home" class="nav-link">Home</a></li>
+                <li><a href="#about" class="nav-link">About</a></li>
+                <li><a href="#projects" class="nav-link">Projects</a></li>
+                <li><a href="#contact" class="nav-link">Contact</a></li>
+            </ul>
+            <div class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="hero-content">
+            <h1 class="hero-title">Robotics & ML Engineer</h1>
+            <p class="hero-subtitle">Master's Student at WPI | Specializing in RL, Generative AI & Sensor Fusion</p>
+            <div class="hero-buttons">
+                <a href="#projects" class="btn btn-primary">View Projects</a>
+                <a href="#" class="btn btn-secondary" download>Resume</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Me Section -->
+    <section id="about" class="about">
+        <div class="container">
+            <h2 class="section-title">About Me</h2>
+            <div class="about-content">
+                <p class="about-bio">
+                    Currently a Master's student in Robotics at Worcester Polytechnic Institute (WPI). 
+                    Researcher at PEAR Lab focusing on sensor fusion (ultrasound + event cameras) for 
+                    high-speed drones. Previously an ML Engineer at Quantiphi.
+                </p>
+                <div class="skills">
+                    <h3>Skills & Technologies</h3>
+                    <div class="skill-tags">
+                        <span class="skill-tag">ROS2</span>
+                        <span class="skill-tag">C++</span>
+                        <span class="skill-tag">PyTorch</span>
+                        <span class="skill-tag">OpenCV</span>
+                        <span class="skill-tag">Reinforcement Learning</span>
+                        <span class="skill-tag">Generative AI</span>
+                        <span class="skill-tag">Sensor Fusion</span>
+                        <span class="skill-tag">Python</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="projects">
+        <div class="container">
+            <h2 class="section-title">Featured Projects</h2>
+            <p class="projects-subtitle">Automatically fetched from GitHub</p>
+            
+            <!-- Highlighted Projects Container -->
+            <div id="highlighted-projects" class="highlighted-projects"></div>
+            
+            <!-- All Projects Grid -->
+            <div id="projects-grid" class="projects-grid">
+                <!-- Projects will be dynamically loaded here -->
+            </div>
+            
+            <!-- Loading State -->
+            <div id="loading" class="loading">
+                <p>Loading projects from GitHub...</p>
+            </div>
+            
+            <!-- Error State -->
+            <div id="error" class="error" style="display: none;">
+                <p>Could not load projects. Please check the GitHub username.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+        <div class="container">
+            <h2 class="section-title">Get in Touch</h2>
+            <div class="contact-content">
+                <a href="mailto:your.email@example.com" class="contact-item">
+                    <i class="fas fa-envelope"></i>
+                    <span>Email</span>
+                </a>
+                <a href="https://github.com" target="_blank" rel="noopener noreferrer" class="contact-item">
+                    <i class="fab fa-github"></i>
+                    <span>GitHub</span>
+                </a>
+                <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" class="contact-item">
+                    <i class="fab fa-linkedin"></i>
+                    <span>LinkedIn</span>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <p>&copy; 2026 Robotics & ML Engineer. All rights reserved.</p>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="script.js"></script>
+</body>
+</html>
