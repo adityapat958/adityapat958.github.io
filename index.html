@@ -37,7 +37,7 @@
     <!-- Hero Section -->
     <section id="home" class="hero">
         <div class="hero-content">
-            <h1 class="hero-title">Robotics & ML Engineer</h1>
+            <h1 class="hero-title">Aditya Patwardhan</h1>
             <p class="hero-subtitle">Master's Student at WPI | Specializing in RL, Generative AI & Sensor Fusion</p>
             <div class="hero-buttons">
                 <a href="#projects" class="btn btn-primary">View Projects</a>
@@ -77,24 +77,190 @@
     <section id="projects" class="projects">
         <div class="container">
             <h2 class="section-title">Featured Projects</h2>
-            <p class="projects-subtitle">Automatically fetched from GitHub</p>
-            
-            <!-- Highlighted Projects Container -->
-            <div id="highlighted-projects" class="highlighted-projects"></div>
-            
-            <!-- All Projects Grid -->
-            <div id="projects-grid" class="projects-grid">
-                <!-- Projects will be dynamically loaded here -->
+
+            <!-- Flagship Projects -->
+            <div class="projects-grid featured">
+
+                <div class="project-card flagship">
+                    <div class="project-badge ongoing">Ongoing Research</div>
+                    <h3 class="project-name">Event Camera + Ultrasound Sensor Fusion</h3>
+                    <p class="project-description">
+                        Research at PEAR Lab (Prof. Nitin Sanket, WPI). Developing novel sensor fusion
+                        combining event cameras and ultrasound transceiver arrays for autonomous drone flight
+                        at 20 m/s. Includes 3D triangulation via multi-transceiver ultrasound and RL-based
+                        obstacle avoidance policies.
+                    </p>
+                    <div class="project-tags">
+                        <span class="tag">ROS2</span>
+                        <span class="tag">Event Cameras</span>
+                        <span class="tag">Sensor Fusion</span>
+                        <span class="tag">RL</span>
+                        <span class="tag">C++</span>
+                    </div>
+                    <div class="project-links">
+                        <span class="project-link-disabled"><i class="fas fa-lock"></i> Private Repo</span>
+                    </div>
+                </div>
+
+                <div class="project-card flagship">
+                    <div class="project-badge">RBE 595 — Aerial Robotics</div>
+                    <h3 class="project-name">Autonomous Drone Navigation & State Estimation</h3>
+                    <p class="project-description">
+                        Built a full drone autonomy stack: IMU-based attitude estimation (complementary filter,
+                        Madgwick, UKF), trajectory generation, path planning, and Gaussian Splatting-based
+                        environment rendering for P2b. Contributed UKF sigma-point and Kalman update implementation.
+                    </p>
+                    <div class="project-tags">
+                        <span class="tag">Python</span>
+                        <span class="tag">UKF</span>
+                        <span class="tag">State Estimation</span>
+                        <span class="tag">Path Planning</span>
+                        <span class="tag">3D Gaussian Splatting</span>
+                    </div>
+                    <div class="project-links">
+                        <a href="https://github.com/Shakthi-Bala/RBE595_Aerial_Robotics_p1_and_p2" target="_blank" rel="noopener noreferrer" class="project-link">
+                            <i class="fab fa-github"></i> View on GitHub
+                        </a>
+                    </div>
+                </div>
+
             </div>
-            
-            <!-- Loading State -->
-            <div id="loading" class="loading">
-                <p>Loading projects from GitHub...</p>
-            </div>
-            
-            <!-- Error State -->
-            <div id="error" class="error" style="display: none;">
-                <p>Could not load projects. Please check the GitHub username.</p>
+
+            <!-- Supporting Projects Grid -->
+            <div class="projects-grid">
+
+                <div class="project-card">
+                    <div class="project-badge wip">In Progress</div>
+                    <h3 class="project-name">Deep Hierarchical RL — Habitat 2.0</h3>
+                    <p class="project-description">
+                        Hierarchical reinforcement learning for long-horizon mobile manipulation tasks
+                        in Habitat 2.0. Agent follows natural language commands to complete multi-step
+                        pick-and-place tasks in simulated indoor environments.
+                    </p>
+                    <div class="project-tags">
+                        <span class="tag">PyTorch</span>
+                        <span class="tag">RL</span>
+                        <span class="tag">Habitat 2.0</span>
+                        <span class="tag">HRL</span>
+                    </div>
+                    <div class="project-links">
+                        <a href="https://github.com/kohlir2020/WPI_DS551_G10_Final" target="_blank" rel="noopener noreferrer" class="project-link">
+                            <i class="fab fa-github"></i> GitHub
+                        </a>
+                    </div>
+                </div>
+
+                <div class="project-card">
+                    <div class="project-badge">DS 551 — Generative AI</div>
+                    <h3 class="project-name">AYS Consistency Models — MNIST</h3>
+                    <p class="project-description">
+                        Combined ideas from Consistency Models and Align Your Steps (AYS) to improve
+                        the sampling schedule of consistency models. Experiments on MNIST demonstrating
+                        faster convergence and improved sample quality with AYS-guided schedules.
+                    </p>
+                    <div class="project-tags">
+                        <span class="tag">PyTorch</span>
+                        <span class="tag">Diffusion Models</span>
+                        <span class="tag">Consistency Models</span>
+                        <span class="tag">Generative AI</span>
+                    </div>
+                    <div class="project-links">
+                        <a href="https://github.com/Suryanshg/AYS-Consistency-Models-MNIST" target="_blank" rel="noopener noreferrer" class="project-link">
+                            <i class="fab fa-github"></i> GitHub
+                        </a>
+                    </div>
+                </div>
+
+                <div class="project-card">
+                    <div class="project-badge">RBE 549 — P1</div>
+                    <h3 class="project-name">AutoPano — Image Stitching</h3>
+                    <p class="project-description">
+                        Panorama stitching pipeline: traditional approach (Harris corners, ANMS, RANSAC homography)
+                        and a deep learning approach (supervised + unsupervised homography estimation).
+                    </p>
+                    <div class="project-tags">
+                        <span class="tag">Python</span>
+                        <span class="tag">OpenCV</span>
+                        <span class="tag">RANSAC</span>
+                        <span class="tag">Deep Homography</span>
+                    </div>
+                    <div class="project-links">
+                        <a href="https://github.com/Shakthi-Bala/Traditional_panaroma" target="_blank" rel="noopener noreferrer" class="project-link">
+                            <i class="fab fa-github"></i> GitHub (P1a)
+                        </a>
+                        <a href="https://github.com/Shakthi-Bala/Deep-Homography" target="_blank" rel="noopener noreferrer" class="project-link" style="margin-left:0.5rem;">
+                            <i class="fab fa-github"></i> GitHub (P1b)
+                        </a>
+                    </div>
+                </div>
+
+                <div class="project-card">
+                    <div class="project-badge">RBE 549 — P2</div>
+                    <h3 class="project-name">Structure from Motion & NeRF</h3>
+                    <p class="project-description">
+                        Classical SfM pipeline: feature matching, fundamental/essential matrix, triangulation,
+                        PnP RANSAC, and bundle adjustment. Phase 2: deep NeRF for novel view synthesis.
+                    </p>
+                    <div class="project-tags">
+                        <span class="tag">Python</span>
+                        <span class="tag">SfM</span>
+                        <span class="tag">Bundle Adjustment</span>
+                        <span class="tag">NeRF</span>
+                        <span class="tag">3D Vision</span>
+                    </div>
+                    <div class="project-links">
+                        <a href="https://github.com/Shakthi-Bala/Structure_from_motion_classical" target="_blank" rel="noopener noreferrer" class="project-link">
+                            <i class="fab fa-github"></i> GitHub (SfM)
+                        </a>
+                        <a href="https://github.com/Shakthi-Bala/NERF" target="_blank" rel="noopener noreferrer" class="project-link" style="margin-left:0.5rem;">
+                            <i class="fab fa-github"></i> GitHub (NeRF)
+                        </a>
+                    </div>
+                </div>
+
+                <div class="project-card">
+                    <div class="project-badge">RBE 549 — P3</div>
+                    <h3 class="project-name">EinsteinVision</h3>
+                    <p class="project-description">
+                        Advanced computer vision project — multi-phase implementation covering feature detection,
+                        segmentation, and scene understanding. Details and report to be added.
+                    </p>
+                    <div class="project-tags">
+                        <span class="tag">Python</span>
+                        <span class="tag">Computer Vision</span>
+                        <span class="tag">PyTorch</span>
+                    </div>
+                    <div class="project-links">
+                        <a href="https://github.com/Shakthi-Bala/einstein_vision" target="_blank" rel="noopener noreferrer" class="project-link">
+                            <i class="fab fa-github"></i> GitHub
+                        </a>
+                    </div>
+                </div>
+
+                <div class="project-card">
+                    <div class="project-badge">RBE 549 — P4</div>
+                    <h3 class="project-name">Visual Inertial Odometry</h3>
+                    <p class="project-description">
+                        Classical VIO pipeline (feature tracking + IMU preintegration) and deep VIO
+                        for ego-motion estimation. Implements both model-based and learning-based approaches.
+                    </p>
+                    <div class="project-tags">
+                        <span class="tag">Python</span>
+                        <span class="tag">VIO</span>
+                        <span class="tag">IMU</span>
+                        <span class="tag">Deep Learning</span>
+                        <span class="tag">Odometry</span>
+                    </div>
+                    <div class="project-links">
+                        <a href="https://github.com/Shakthi-Bala/Classical_vio" target="_blank" rel="noopener noreferrer" class="project-link">
+                            <i class="fab fa-github"></i> GitHub (Classical)
+                        </a>
+                        <a href="https://github.com/Shakthi-Bala/Deep_vio" target="_blank" rel="noopener noreferrer" class="project-link" style="margin-left:0.5rem;">
+                            <i class="fab fa-github"></i> GitHub (Deep)
+                        </a>
+                    </div>
+                </div>
+
             </div>
         </div>
     </section>
@@ -104,15 +270,15 @@
         <div class="container">
             <h2 class="section-title">Get in Touch</h2>
             <div class="contact-content">
-                <a href="mailto:your.email@example.com" class="contact-item">
+                <a href="mailto:adityapatwardhan9.58@gmail.com" class="contact-item">
                     <i class="fas fa-envelope"></i>
                     <span>Email</span>
                 </a>
-                <a href="https://github.com" target="_blank" rel="noopener noreferrer" class="contact-item">
+                <a href="https://github.com/adityapat958" target="_blank" rel="noopener noreferrer" class="contact-item">
                     <i class="fab fa-github"></i>
                     <span>GitHub</span>
                 </a>
-                <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" class="contact-item">
+                <a href="https://www.linkedin.com/in/aditya-patwardhan-26b5ba220/" target="_blank" rel="noopener noreferrer" class="contact-item">
                     <i class="fab fa-linkedin"></i>
                     <span>LinkedIn</span>
                 </a>
