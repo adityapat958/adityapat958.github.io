@@ -172,6 +172,17 @@
         <video id="modal-video" controls playsinline></video>
     </dialog>
 
+    <dialog id="gallery-modal" class="video-modal gallery-modal">
+        <div class="modal-head"><span class="gm-count"></span><button class="gm-close" aria-label="Close">&times;</button></div>
+        <div class="gm-stage">
+            <button class="gm-nav gm-prev" aria-label="Previous">&#10094;</button>
+            <img class="gm-img" alt="">
+            <video class="gm-vid" controls muted loop playsinline hidden></video>
+            <button class="gm-nav gm-next" aria-label="Next">&#10095;</button>
+        </div>
+        <p class="gm-cap"></p>
+    </dialog>
+
     <!-- About Me Section -->
     <section id="about" class="about">
         <div class="container">
@@ -229,6 +240,10 @@
                 </div>
 
                 <div class="project-card flagship">
+                    <button class="project-media" data-gallery="aerial" aria-label="Open Autonomous Drone Navigation & State Estimation gallery">
+                        <img class="pm-cover" src="assets/media/projects/aerial/cover.jpg" alt="Autonomous Drone Navigation & State Estimation preview" loading="lazy">
+                        <span class="pm-count"><i class="fas fa-images"></i> 7</span>
+                    </button>
                     <div class="project-badge">RBE 595 — Aerial Robotics</div>
                     <h3 class="project-name">Autonomous Drone Navigation & State Estimation</h3>
                     <p class="project-description">
@@ -256,6 +271,10 @@
             <div class="projects-grid">
 
                 <div class="project-card">
+                    <button class="project-media" data-gallery="hrl" aria-label="Open Deep Hierarchical RL — Habitat 2.0 gallery">
+                        <img class="pm-cover" src="assets/media/projects/hrl/cover.jpg" alt="Deep Hierarchical RL — Habitat 2.0 preview" loading="lazy">
+                        <span class="pm-count"><i class="fas fa-images"></i> 4</span>
+                    </button>
                     <div class="project-badge wip">In Progress</div>
                     <h3 class="project-name">Deep Hierarchical RL — Habitat 2.0</h3>
                     <p class="project-description">
@@ -277,6 +296,10 @@
                 </div>
 
                 <div class="project-card">
+                    <button class="project-media" data-gallery="consistency" aria-label="Open AYS Consistency Models — MNIST gallery">
+                        <img class="pm-cover" src="assets/media/projects/consistency/cover.jpg" alt="AYS Consistency Models — MNIST preview" loading="lazy">
+                        <span class="pm-count"><i class="fas fa-images"></i> 4</span>
+                    </button>
                     <div class="project-badge">DS 551 — Generative AI</div>
                     <h3 class="project-name">AYS Consistency Models — MNIST</h3>
                     <p class="project-description">
@@ -298,6 +321,10 @@
                 </div>
 
                 <div class="project-card">
+                    <button class="project-media" data-gallery="autopano" aria-label="Open AutoPano — Image Stitching gallery">
+                        <img class="pm-cover" src="assets/media/projects/autopano/cover.jpg" alt="AutoPano — Image Stitching preview" loading="lazy">
+                        <span class="pm-count"><i class="fas fa-images"></i> 7</span>
+                    </button>
                     <div class="project-badge">RBE 549 — P1</div>
                     <h3 class="project-name">AutoPano — Image Stitching</h3>
                     <p class="project-description">
@@ -321,6 +348,10 @@
                 </div>
 
                 <div class="project-card">
+                    <button class="project-media" data-gallery="sfm_nerf" aria-label="Open Structure from Motion & NeRF gallery">
+                        <video class="pm-cover" src="assets/media/projects/sfm_nerf/01.mp4" poster="assets/media/projects/sfm_nerf/cover.jpg" autoplay muted loop playsinline preload="none"></video>
+                        <span class="pm-count"><i class="fas fa-images"></i> 6</span>
+                    </button>
                     <div class="project-badge">RBE 549 — P2</div>
                     <h3 class="project-name">Structure from Motion & NeRF</h3>
                     <p class="project-description">
@@ -345,6 +376,10 @@
                 </div>
 
                 <div class="project-card">
+                    <a class="project-media" href="#showcase" aria-label="Watch EinsteinVision reel">
+                        <img class="pm-cover" src="assets/media/einsteinvision/reel_poster.jpg" alt="EinsteinVision reel" loading="lazy">
+                        <span class="pm-count"><i class="fas fa-play"></i> Reel</span>
+                    </a>
                     <div class="project-badge">RBE 549 — P3</div>
                     <h3 class="project-name">EinsteinVision</h3>
                     <p class="project-description">
@@ -365,6 +400,10 @@
                 </div>
 
                 <div class="project-card">
+                    <button class="project-media" data-gallery="vio" aria-label="Open Visual Inertial Odometry gallery">
+                        <img class="pm-cover" src="assets/media/projects/vio/cover.jpg" alt="Visual Inertial Odometry preview" loading="lazy">
+                        <span class="pm-count"><i class="fas fa-images"></i> 6</span>
+                    </button>
                     <div class="project-badge">RBE 549 — P4</div>
                     <h3 class="project-name">Visual Inertial Odometry</h3>
                     <p class="project-description">

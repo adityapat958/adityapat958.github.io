@@ -13,3 +13,14 @@ H.264, yuv420p, `+faststart`, no audio. Full-res sources live in `../../media_or
 - Source: `~/RL_final/WPI_DS551_G10_Final/videos/portfolio/`
 
 Usage: `<video src="assets/media/einsteinvision/reel_720p.mp4" poster="assets/media/einsteinvision/reel_poster.jpg" muted loop playsinline autoplay></video>`
+
+## projects/ — project-card covers + galleries
+`projects/<key>/cover.jpg` (800×450 card cover), `NN.jpg` (≤1800 px wide) / `NN.mp4` (NeRF loops), captions in `manifest.json`
+(copied into `GALLERIES` in script.js). Keys: autopano, sfm_nerf, vio, aerial, hrl, consistency.
+Sources: report PDFs (embedded figures) + project output folders — full map in /tmp/pf_cand/*/SOURCES.md at build time:
+- autopano: ~/Downloads/p1 autopano.pdf, ~/Downloads/Group3_p1/Report.pdf
+- sfm_nerf: ~/Downloads/Group3_p2/Phase1/Data/church/*, ~/Downloads/Group3_p2-2/Group3_p2/Phase2/{lego,ship_render}.gif
+- vio: ~/Downloads/Group4_p4/Code/Phase 2/{figures,visualizations}
+- aerial: ~/RBE 595 Aerial Robotics/{p0,p2,p3,p4} + RBE595_P0/P3/P4 report PDFs
+- hrl: ~/RL_final/WPI_DS551_G10_Final (plots, render sheets)
+- consistency: ~/gen_ai/GenAI-FinalSubmission/.../visualizations/images
