@@ -755,3 +755,36 @@ section {
         font-size: 0.8rem;
     }
 }
+
+/* ============================================
+   SHOWCASE (videos)
+   ============================================ */
+.showcase { background: var(--primary-bg); }
+.video-frame { position: relative; border-radius: 10px; overflow: hidden; border: 1px solid var(--border-color);
+    background: #000; aspect-ratio: 16 / 9; box-shadow: 0 10px 40px rgba(0, 217, 255, 0.08); }
+.showcase-video { width: 100%; height: 100%; display: block; object-fit: contain; background: #000; }
+.showcase-feature { display: grid; grid-template-columns: 1.6fr 1fr; gap: 2rem; align-items: center; margin-bottom: 3rem; }
+.showcase-text .project-name { font-size: 1.5rem; }
+.showcase-subtitle { color: var(--text-primary); font-size: 1.2rem; margin: 0 0 1rem; }
+.showcase-subtitle span { color: var(--text-secondary); font-weight: 300; font-size: 0.9rem; margin-left: 0.5rem; }
+.scene-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); gap: 0.8rem; margin-bottom: 3.5rem; }
+.scene-tile { position: relative; padding: 0; border: 1px solid var(--border-color); border-radius: 8px; overflow: hidden;
+    background: #000; cursor: pointer; aspect-ratio: 16 / 9; transition: transform var(--transition), border-color var(--transition); }
+.scene-tile img { width: 100%; height: 100%; object-fit: cover; display: block; opacity: 0.85; transition: opacity var(--transition); }
+.scene-tile:hover { transform: translateY(-3px); border-color: var(--accent-blue); }
+.scene-tile:hover img { opacity: 1; }
+.scene-label { position: absolute; left: 0; right: 0; bottom: 0; padding: 0.4rem 0.6rem; font-size: 0.85rem; text-align: left;
+    color: #fff; background: linear-gradient(transparent, rgba(0, 0, 0, 0.85)); }
+.scene-label i { color: var(--accent-blue); margin-right: 0.3rem; }
+.showcase-pair { display: grid; grid-template-columns: 1fr 1fr; gap: 2rem; }
+.showcase-card .video-frame { margin-bottom: 1rem; }
+.inline-link { color: var(--accent-blue); white-space: nowrap; }
+.video-modal { width: min(1200px, 94vw); padding: 0; border: 1px solid var(--border-color); border-radius: 10px; background: #000; color: var(--text-primary); }
+.video-modal::backdrop { background: rgba(0, 0, 0, 0.8); }
+.video-modal video { width: 100%; display: block; }
+.modal-head { display: flex; justify-content: space-between; align-items: center; padding: 0.5rem 0.9rem; background: var(--secondary-bg); }
+.modal-head button { background: none; border: none; color: var(--text-primary); font-size: 1.6rem; cursor: pointer; line-height: 1; }
+@media (max-width: 900px) {
+    .showcase-feature, .showcase-pair { grid-template-columns: 1fr; }
+    .scene-grid { grid-template-columns: repeat(2, 1fr); }
+}

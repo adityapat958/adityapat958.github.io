@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Portfolio of a Robotics and Machine Learning Engineer specializing in RL, Generative AI, and Sensor Fusion.">
-    <title>Robotics & ML Engineer Portfolio</title>
+    <meta name="description" content="Aditya Patwardhan — Robotics MS at WPI. Event-camera sensor fusion, reinforcement learning, 3D computer vision.">
+    <title>Aditya Patwardhan — Robotics & ML</title>
     
     <!-- Google Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
@@ -19,9 +19,10 @@
     <!-- Navigation Bar -->
     <nav class="navbar">
         <div class="nav-container">
-            <div class="nav-brand">Portfolio</div>
+            <div class="nav-brand">Aditya Patwardhan</div>
             <ul class="nav-menu">
                 <li><a href="#home" class="nav-link">Home</a></li>
+                <li><a href="#showcase" class="nav-link">Showcase</a></li>
                 <li><a href="#about" class="nav-link">About</a></li>
                 <li><a href="#projects" class="nav-link">Projects</a></li>
                 <li><a href="#contact" class="nav-link">Contact</a></li>
@@ -40,11 +41,136 @@
             <h1 class="hero-title">Aditya Patwardhan</h1>
             <p class="hero-subtitle">Master's Student at WPI | Specializing in RL, Generative AI & Sensor Fusion</p>
             <div class="hero-buttons">
-                <a href="#projects" class="btn btn-primary">View Projects</a>
+                <a href="#showcase" class="btn btn-primary">Watch Showcase</a>
+                <a href="#projects" class="btn btn-secondary">Projects</a>
                 <a href="#" class="btn btn-secondary" download>Resume</a>
             </div>
         </div>
     </section>
+
+    <!-- Showcase Section -->
+    <section id="showcase" class="showcase">
+        <div class="container">
+            <h2 class="section-title">Showcase</h2>
+
+            <div class="showcase-feature">
+                <div class="video-frame">
+                    <video id="reel" class="showcase-video" autoplay muted loop playsinline preload="metadata"
+                           poster="assets/media/einsteinvision/reel_poster.jpg"
+                           data-sd="assets/media/einsteinvision/reel_720p.mp4"
+                           data-hd="assets/media/einsteinvision/reel_1080p.mp4"></video>
+                </div>
+                <div class="showcase-text">
+                    <div class="project-badge">RBE 549 — Computer Vision</div>
+                    <h3 class="project-name">EinsteinVision — Dashcam to 3D Driving Scene</h3>
+                    <p class="project-description">
+                        Rebuilds a Tesla-style driving visualisation from raw dashcam video. Detected vehicles,
+                        pedestrians, lanes and traffic lights are lifted into 3D, smoothed into tracks and
+                        rendered in Blender with per-vehicle state (brake lights, indicators, parked cars),
+                        camera-sampled car colours, ego speed from visual odometry and per-scene lighting
+                        (day, overcast, rain, night).
+                    </p>
+                    <div class="project-tags">
+                        <span class="tag">Object Detection</span>
+                        <span class="tag">3D Reconstruction</span>
+                        <span class="tag">Tracking</span>
+                        <span class="tag">Blender / Cycles</span>
+                        <span class="tag">Python</span>
+                    </div>
+                </div>
+            </div>
+
+            <h3 class="showcase-subtitle">All 13 scenes <span>dashcam · front · top · chase</span></h3>
+            <div class="scene-grid">
+                <button class="scene-tile" data-video="assets/media/einsteinvision/scene1_composite_720p.mp4" data-title="EinsteinVision · Scene 1">
+                    <img src="assets/media/einsteinvision/scene1_composite_poster.jpg" alt="EinsteinVision scene 1 preview" loading="lazy">
+                    <span class="scene-label"><i class="fas fa-play"></i> Scene 1</span>
+                </button>
+                <button class="scene-tile" data-video="assets/media/einsteinvision/scene2_composite_720p.mp4" data-title="EinsteinVision · Scene 2">
+                    <img src="assets/media/einsteinvision/scene2_composite_poster.jpg" alt="EinsteinVision scene 2 preview" loading="lazy">
+                    <span class="scene-label"><i class="fas fa-play"></i> Scene 2</span>
+                </button>
+                <button class="scene-tile" data-video="assets/media/einsteinvision/scene3_composite_720p.mp4" data-title="EinsteinVision · Scene 3">
+                    <img src="assets/media/einsteinvision/scene3_composite_poster.jpg" alt="EinsteinVision scene 3 preview" loading="lazy">
+                    <span class="scene-label"><i class="fas fa-play"></i> Scene 3</span>
+                </button>
+                <button class="scene-tile" data-video="assets/media/einsteinvision/scene4_composite_720p.mp4" data-title="EinsteinVision · Scene 4">
+                    <img src="assets/media/einsteinvision/scene4_composite_poster.jpg" alt="EinsteinVision scene 4 preview" loading="lazy">
+                    <span class="scene-label"><i class="fas fa-play"></i> Scene 4</span>
+                </button>
+                <button class="scene-tile" data-video="assets/media/einsteinvision/scene5_composite_720p.mp4" data-title="EinsteinVision · Scene 5">
+                    <img src="assets/media/einsteinvision/scene5_composite_poster.jpg" alt="EinsteinVision scene 5 preview" loading="lazy">
+                    <span class="scene-label"><i class="fas fa-play"></i> Scene 5</span>
+                </button>
+                <button class="scene-tile" data-video="assets/media/einsteinvision/scene6_composite_720p.mp4" data-title="EinsteinVision · Scene 6">
+                    <img src="assets/media/einsteinvision/scene6_composite_poster.jpg" alt="EinsteinVision scene 6 preview" loading="lazy">
+                    <span class="scene-label"><i class="fas fa-play"></i> Scene 6</span>
+                </button>
+                <button class="scene-tile" data-video="assets/media/einsteinvision/scene7_composite_720p.mp4" data-title="EinsteinVision · Scene 7">
+                    <img src="assets/media/einsteinvision/scene7_composite_poster.jpg" alt="EinsteinVision scene 7 preview" loading="lazy">
+                    <span class="scene-label"><i class="fas fa-play"></i> Scene 7</span>
+                </button>
+                <button class="scene-tile" data-video="assets/media/einsteinvision/scene8_composite_720p.mp4" data-title="EinsteinVision · Scene 8">
+                    <img src="assets/media/einsteinvision/scene8_composite_poster.jpg" alt="EinsteinVision scene 8 preview" loading="lazy">
+                    <span class="scene-label"><i class="fas fa-play"></i> Scene 8</span>
+                </button>
+                <button class="scene-tile" data-video="assets/media/einsteinvision/scene9_composite_720p.mp4" data-title="EinsteinVision · Scene 9">
+                    <img src="assets/media/einsteinvision/scene9_composite_poster.jpg" alt="EinsteinVision scene 9 preview" loading="lazy">
+                    <span class="scene-label"><i class="fas fa-play"></i> Scene 9</span>
+                </button>
+                <button class="scene-tile" data-video="assets/media/einsteinvision/scene10_composite_720p.mp4" data-title="EinsteinVision · Scene 10">
+                    <img src="assets/media/einsteinvision/scene10_composite_poster.jpg" alt="EinsteinVision scene 10 preview" loading="lazy">
+                    <span class="scene-label"><i class="fas fa-play"></i> Scene 10</span>
+                </button>
+                <button class="scene-tile" data-video="assets/media/einsteinvision/scene11_composite_720p.mp4" data-title="EinsteinVision · Scene 11">
+                    <img src="assets/media/einsteinvision/scene11_composite_poster.jpg" alt="EinsteinVision scene 11 preview" loading="lazy">
+                    <span class="scene-label"><i class="fas fa-play"></i> Scene 11</span>
+                </button>
+                <button class="scene-tile" data-video="assets/media/einsteinvision/scene12_composite_720p.mp4" data-title="EinsteinVision · Scene 12">
+                    <img src="assets/media/einsteinvision/scene12_composite_poster.jpg" alt="EinsteinVision scene 12 preview" loading="lazy">
+                    <span class="scene-label"><i class="fas fa-play"></i> Scene 12</span>
+                </button>
+                <button class="scene-tile" data-video="assets/media/einsteinvision/scene13_composite_720p.mp4" data-title="EinsteinVision · Scene 13">
+                    <img src="assets/media/einsteinvision/scene13_composite_poster.jpg" alt="EinsteinVision scene 13 preview" loading="lazy">
+                    <span class="scene-label"><i class="fas fa-play"></i> Scene 13</span>
+                </button>
+            </div>
+
+            <div class="showcase-pair">
+                <div class="showcase-card">
+                    <div class="video-frame">
+                        <video class="showcase-video" controls muted playsinline preload="none"
+                               poster="assets/media/fetch_rl/fetch_bedroom_to_kitchen_poster.jpg"
+                               src="assets/media/fetch_rl/fetch_bedroom_to_kitchen_720p.mp4"></video>
+                    </div>
+                    <div class="project-badge">DS 551 — Reinforcement Learning</div>
+                    <h3 class="project-name">Fetch Robot: Bedroom → Kitchen Rearrangement</h3>
+                    <p class="project-description">
+                        Long-horizon object rearrangement in Habitat 2.0 (ReplicaCAD): learned navigate,
+                        pick and place skills chained to carry an object across the apartment.
+                    </p>
+                </div>
+                <div class="showcase-card">
+                    <div class="video-frame">
+                        <video class="showcase-video" controls muted playsinline preload="none"
+                               poster="assets/media/fetch_rl/fetch_learned_skills_poster.jpg"
+                               src="assets/media/fetch_rl/fetch_learned_skills_720p.mp4"></video>
+                    </div>
+                    <div class="project-badge">DS 551 — Reinforcement Learning</div>
+                    <h3 class="project-name">Learned Rearrangement Skills</h3>
+                    <p class="project-description">
+                        PPO skill policies trained from depth and proprioception: navigate, pick, navigate,
+                        place, shown individually and composed into the full fetch task.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <dialog id="video-modal" class="video-modal">
+        <div class="modal-head"><span id="modal-title"></span><button id="modal-close" aria-label="Close">&times;</button></div>
+        <video id="modal-video" controls playsinline></video>
+    </dialog>
 
     <!-- About Me Section -->
     <section id="about" class="about">
@@ -222,8 +348,9 @@
                     <div class="project-badge">RBE 549 — P3</div>
                     <h3 class="project-name">EinsteinVision</h3>
                     <p class="project-description">
-                        Advanced computer vision project — multi-phase implementation covering feature detection,
-                        segmentation, and scene understanding. Details and report to be added.
+                        Dashcam video → 3D driving scene: detection, depth and tracking lifted into a
+                        Blender reconstruction with vehicle states and per-scene lighting.
+                        <a href="#showcase" class="inline-link">Watch the reel ↑</a>
                     </p>
                     <div class="project-tags">
                         <span class="tag">Python</span>
@@ -288,7 +415,7 @@
 
     <!-- Footer -->
     <footer class="footer">
-        <p>&copy; 2026 Robotics & ML Engineer. All rights reserved.</p>
+        <p>&copy; 2026 Aditya Patwardhan</p>
     </footer>
 
     <!-- Scripts -->

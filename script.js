@@ -67,3 +67,27 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
 // ============================================
 // SMOOTH SCROLL FOR BUTTONS
 // ============================================
+
+// ============================================
+// SHOWCASE — reel resolution + scene lightbox
+// ============================================
+(() => {
+    const reel = document.getElementById('reel');
+    if (reel) {
+        const hd = window.innerWidth > 1000 && !(navigator.connection && navigator.connection.saveData);
+        reel.src = hd ? reel.dataset.hd : reel.dataset.sd;
+    }
+    const modal = document.getElementById('video-modal');
+    const mv = document.getElementById('modal-video');
+    if (!modal || !mv) return;
+    const close = () => { mv.pause(); mv.removeAttribute('src'); mv.load(); modal.close(); };
+    document.querySelectorAll('.scene-tile').forEach(t => t.addEventListener('click', () => {
+        document.getElementById('modal-title').textContent = t.dataset.title;
+        mv.src = t.dataset.video;
+        modal.showModal();
+        mv.play().catch(() => {});
+    }));
+    document.getElementById('modal-close').addEventListener('click', close);
+    modal.addEventListener('click', e => { if (e.target === modal) close(); });
+    modal.addEventListener('cancel', e => { e.preventDefault(); close(); });
+})();
