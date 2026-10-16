@@ -102,16 +102,35 @@ const GALLERIES = {"autopano": [{"i": "01.jpg", "c": "Classical pipeline panoram
     const img = modal.querySelector('.gm-img'), vid = modal.querySelector('.gm-vid'),
           cap = modal.querySelector('.gm-cap'), cnt = modal.querySelector('.gm-count');
     let key = null, idx = 0;
+    const cache = {};
+    const url = (k, f) => `assets/media/projects/${k}/${f}`;
+    const preload = k => GALLERIES[k].forEach(it => {      // fetch whole gallery once, in order
+        const u = url(k, it.i);
+        if (!cache[u]) { cache[u] = new Image(); cache[u].decoding = 'async'; cache[u].src = u; }
+    });
+    let token = 0;
     const show = () => {
-        const it = GALLERIES[key][idx], base = `assets/media/projects/${key}/`;
-        if (it.v) { img.hidden = true; vid.hidden = false; vid.poster = base + it.i; vid.src = base + it.v; vid.play().catch(() => {}); }
-        else { vid.pause(); vid.hidden = true; vid.removeAttribute('src'); img.hidden = false; img.src = base + it.i; img.alt = it.c; }
+        const it = GALLERIES[key][idx], t = ++token;
         cap.textContent = it.c; cnt.textContent = `${idx + 1} / ${GALLERIES[key].length}`;
+        if (it.v) {
+            img.hidden = true; vid.hidden = false; vid.poster = url(key, it.i); vid.src = url(key, it.v); vid.play().catch(() => {});
+            return;
+        }
+        vid.pause(); vid.hidden = true; vid.removeAttribute('src');
+        const pre = cache[url(key, it.i)] || Object.assign(new Image(), { src: url(key, it.i) });
+        img.classList.add('loading');
+        pre.decode().catch(() => {}).then(() => {           // swap only when decoded → no blank/partial frame
+            if (t !== token) return;                          // user already moved on
+            img.src = pre.src; img.alt = it.c; img.hidden = false; img.classList.remove('loading');
+        });
     };
     const step = d => { idx = (idx + d + GALLERIES[key].length) % GALLERIES[key].length; show(); };
     const close = () => { vid.pause(); vid.removeAttribute('src'); modal.close(); };
+    document.querySelectorAll('button.project-media[data-gallery]').forEach(b => {
+        ['pointerenter', 'touchstart', 'focus'].forEach(ev => b.addEventListener(ev, () => preload(b.dataset.gallery), { once: true, passive: true }));
+    });
     document.querySelectorAll('button.project-media[data-gallery]').forEach(b => b.addEventListener('click', () => {
-        key = b.dataset.gallery; idx = 0; show(); modal.showModal();
+        key = b.dataset.gallery; idx = 0; preload(key); show(); modal.showModal();
     }));
     modal.querySelector('.gm-prev').addEventListener('click', () => step(-1));
     modal.querySelector('.gm-next').addEventListener('click', () => step(1));

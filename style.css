@@ -809,3 +809,5 @@ section {
 .project-card > .project-badge { align-self: flex-start; }
 .video-modal { margin: auto; max-height: 94vh; }
 .gm-img[hidden], .gm-vid[hidden] { display: none; }
+.gm-img { transition: opacity 0.15s ease; }
+.gm-img.loading { opacity: 0.55; }
