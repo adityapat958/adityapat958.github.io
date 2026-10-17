@@ -85,6 +85,11 @@
  ],
  "aerial": [
   {
+   "v": "p5_race.mp4",
+   "i": "p5_race.jpg",
+   "c": "Full autonomous race run (onboard camera): racing windows \u2192 unknown-shape gap \u2192 final window"
+  },
+  {
    "i": "01.jpg",
    "c": "Gaussian-splat render of the lab used for drone racing-window detection"
   },
